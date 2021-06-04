@@ -18,7 +18,7 @@ Vue.component('product', {
                 <p v-if="available">Is available</p>
                 <p v-else="available">Is not available</p>
                 <p v-show="onSale"> {{ 'Sale get 15% off if u buy in ' + countdown + '!'}}</p>
-                <p> User is premuim:{{ premium }}
+                <p> You are a {{ premium }} premium Member
 
                 <div v-for="(variant, index) in variants" 
                      :key="variant.variantId"
@@ -214,7 +214,7 @@ Vue.component('product-tabs', {
     data(){
         return {
             tabs:['Reviews', 'Make a Review', 'Description'],
-            selectedTab: 'Reviews',
+            selectedTab: 'Description',
             details: ["sweet", "fluffy","cute","cozy"],
             sizes:[ 'smull', 'small', 'medium', 'big', 'huge' ],
 
